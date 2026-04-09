@@ -1,0 +1,29 @@
+name: devops
+on: workflow_dispatch
+jobs:
+
+  code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: coding
+      - run: echo "Coding is Done move to build"
+
+  build:
+    runs-on:
+      - ubuntu-latest
+    steps:
+      - name: Build
+      - run: echo "Building is done move to test"
+
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: testing
+      - run: echo "Testing is done move to final work"
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deployment
+      - run: echo "DEPLOYMENT"
+ 
