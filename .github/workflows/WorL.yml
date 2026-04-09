@@ -14,14 +14,3 @@ jobs:
         run: echo "W SPEED"    
       - name: LSPEED
         run: echo "L SPEED"
-
-  details:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Install Python
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y python3
-
-      - name: Check Python
-        run: python3 --version
