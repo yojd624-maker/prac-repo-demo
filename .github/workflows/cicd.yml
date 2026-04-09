@@ -1,6 +1,19 @@
 name: devops
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    inputs:
+      environments:
+        description: This need to be written so u can choose
+        default: "dev"
+        required: true
+        type: choice
+        options:
+          - main
+          - dev
+          - staging
+          - feature
+          
 
 jobs:
 
@@ -25,6 +38,7 @@ jobs:
         run: echo "Testing is done move to final work"
 
   deploy:
+    if: inputs.environment == 'main'
     needs: test
     runs-on: ubuntu-latest
     steps:
