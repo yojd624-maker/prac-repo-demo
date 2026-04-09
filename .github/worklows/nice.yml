@@ -1,22 +1,18 @@
 name: nice
-
 #when to run and where
 on:
-#will run only when pushed on main branch
+  #will run only when pushed on main branch
   push:
     branches: [main]
-
 jobs:
-
-#jobname
+  #jobname
   sayW:
-  
-  #where it runs?
+    #where it runs?
     runs-on: ubuntu-latest
-  #what it should do ? steps?
+    #what it should do ? steps?
+
     steps:
       - name: WSPEED
         run: echo "W SPEED"
-    
       - name: LSPEED
         run: echo "L SPEED"
