@@ -1,0 +1,24 @@
+name: examtime
+on: workflow_dispatch
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: prepare
+        run: echo "Prepare for exam"
+  be-ready:
+    runs-on: ubuntu-latest
+    steps:
+      - name: be-ready
+        run: echo "be ready for exam"
+  exams:
+    runs-on: ubuntu-latest
+    steps:
+      - name: exams
+        run: echo "give exam"
+  go-home:
+    runs-on: ubuntu-latest
+    steps:
+      - name: go-home
+        run: echo "cooked"
+    
