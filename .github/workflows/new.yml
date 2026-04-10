@@ -1,0 +1,10 @@
+name: dus dus
+on: workflow_dispatch
+jobs:
+  greet:
+    runs-on:
+      - self-hosted
+    steps:
+      - name: nice
+        run: echo "Hello this is coming from github to you"
+  
