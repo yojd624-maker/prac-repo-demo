@@ -15,3 +15,8 @@ jobs:
       - name: Run Python addition
         run: |
           python3 -c "a=5; b=7; print('Sum =', a+b)"
+      - name: Debug
+        run: |
+          echo "Running on EC2"
+          hostname
+          whoami
