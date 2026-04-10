@@ -15,4 +15,4 @@ jobs:
         uses: docker/build-push-action@v6
         with:
           push: true
-          tags: ${{secrets.DName}}/${{vars.GITHUBREPO}}:${{github.sha}}
+          tags: ${{secrets.DName}}/${{github.event.repository.name}}:${{github.sha}}
